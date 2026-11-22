@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <!-- Meta tag essenziali per la codifica e la visualizzazione responsive su mobile -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabella Mobile 1 Colonna e 3 Righe</title>
+    
+    <!-- Caricamento di Tailwind CSS per uno stile moderno, pulito e responsive -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Caricamento del font Inter da Google Fonts per una leggibilità ottimale -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-100 text-slate-800 min-h-screen flex flex-col justify-center items-center p-4 sm:p-6 antialiased selection:bg-indigo-100 selection:text-indigo-700">
+
+    <!-- Contenitore principale ottimizzato per mobile (max-width 480px centrato, a tutta larghezza su schermi piccoli) -->
+    <main class="w-full max-w-[480px] mx-auto">
+        
+        <!-- Intestazione della sezione -->
+        <header class="mb-5 px-1">
+            <h1 class="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">
+                Riepilogo Elementi
+            </h1>
+            <p class="text-sm text-slate-500 mt-1">
+                Vista mobile a singola colonna con 3 righe informative
+            </p>
+        </header>
+
+        <!-- Card contenitore della tabella con bordi arrotondati e ombreggiatura leggera -->
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 overflow-hidden">
+            
+            <!-- Tabella HTML semantica: 1 colonna e 3 righe -->
+            <table class="w-full border-collapse text-left">
+                
+                <!-- Intestazione nascosta visivamente ma utile per gli screen reader (accessibilità) -->
+                <thead class="sr-only">
+                    <tr>
+                        <th scope="col">Contenuto della riga</th>
+                    </tr>
+                </thead>
+                
+                <!-- Corpo della tabella con divisori sottili tra le righe -->
+                <tbody class="divide-y divide-slate-100">
+                    
+                    <!-- Riga 1 -->
+                    <tr class="transition-colors duration-150 hover:bg-slate-50/90 active:bg-slate-100">
+                        <td class="p-5 sm:p-6">
+                            <div class="flex items-start justify-between gap-3">
+                                <div>
+                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-indigo-50 text-indigo-700 mb-2">
+                                        Riga 1
+                                    </span>
+                                    <h2 class="text-base font-semibold text-slate-900">
+                                        Primo elemento della lista
+                                    </h2>
+                                    <p class="text-sm text-slate-600 mt-1 leading-relaxed">
+                                        Testo segnaposto per la prima riga. Ottimizzato per una lettura chiara e confortevole su schermi smartphone.
+                                    </p>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- Riga 2 -->
+                    <tr class="transition-colors duration-150 hover:bg-slate-50/90 active:bg-slate-100">
+                        <td class="p-5 sm:p-6">
+                            <div class="flex items-start justify-between gap-3">
+                                <div>
+                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-50 text-emerald-700 mb-2">
+                                        Riga 2
+                                    </span>
+                                    <h2 class="text-base font-semibold text-slate-900">
+                                        Secondo elemento della lista
+                                    </h2>
+                                    <p class="text-sm text-slate-600 mt-1 leading-relaxed">
+                                        Testo segnaposto per la seconda riga. Spaziatura interna generosa e divisori delicati per separare i contenuti.
+                                    </p>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- Riga 3 -->
+                    <tr class="transition-colors duration-150 hover:bg-slate-50/90 active:bg-slate-100">
+                        <td class="p-5 sm:p-6">
+                            <div class="flex items-start justify-between gap-3">
+                                <div>
+                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-amber-50 text-amber-700 mb-2">
+                                        Riga 3
+                                    </span>
+                                    <h2 class="text-base font-semibold text-slate-900">
+                                        Terzo elemento della lista
+                                    </h2>
+                                    <p class="text-sm text-slate-600 mt-1 leading-relaxed">
+                                        Testo segnaposto per la terza riga. Struttura flessibile pronta per essere personalizzata con i tuoi dati reali.
+                                    </p>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Nota a piè di pagina discreta -->
+        <footer class="mt-4 text-center">
+            <p class="text-xs text-slate-400">
+                Layout responsive • Larghezza massima 480px
+            </p>
+        </footer>
+
+    </main>
+
+</body>
+</html>
